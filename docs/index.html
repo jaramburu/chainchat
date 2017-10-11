@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>ChainList from ChainSkills</title>
+  <title>ChainChat by Me</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -40,8 +40,8 @@
       <div class="row panel panel-default">
         <div class="panel-heading clearfix">
           <div class="panel-title">
-            <button class="btn btn-info btn-lg pull-left" data-toggle="collapse" data-target="#events" aria-expanded="false" aria-controls="events">Events</button>
-            <button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#sellArticle">Sell an article</button>
+            <button class="btn btn-info btn-lg pull-left" data-toggle="collapse" data-target="#events" aria-expanded="false" aria-controls="events">History</button>
+            <button class="btn btn-info btn-lg pull-right" data-toggle="modal" data-target="#sellArticle">Post Some Ish</button>
           </div>
         </div>
         <ul id="events" class="collapse list-group"></ul>
@@ -66,7 +66,7 @@
           <strong>Sold by</strong>: <span class="article-seller"></span><br/>
         </div>
         <div class="panel-footer">
-          <button type="button" class="btn btn-primary btn-success btn-buy" onclick="App.buyArticle(); return false;">Buy</button>
+          <button type="button" class="btn btn-primary btn-success btn-buy" onclick="App.buyArticle(); return false;">Remove</button>
         </div>
       </div>
     </div>
@@ -80,7 +80,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Sell your article</h4>
+          <h4 class="modal-title">Post to ChainChat</h4>
         </div>
         <div class="modal-body">
 
@@ -88,16 +88,16 @@
             <div class="col-lg-12">
               <form>
                 <div class="form-group">
-                  <label for="article_name">Article name</label>
-                  <input type="text" class="form-control" id="article_name" placeholder="Enter the name of your article">
+                  <label for="article_name">Subject</label>
+                  <input type="text" class="form-control" id="article_name" placeholder="Enter the subject of your post">
                 </div>
                 <div class="form-group">
-                  <label for="price">Price in ETH</label>
-                  <input type="number" class="form-control" id="article_price" placeholder="1" pattern="[0-9]+([\.,][0-9]+)?" step="0.01">
+                  <label for="price">Price to Remove</label>
+                  <input type="number" class="form-control" id="article_price" placeholder="Enter the price to remove your post from ChainChat" pattern="[0-9]+([\.,][0-9]+)?" step="0.01">
                 </div>
                 <div class="form-group">
-                  <label for="description">Description</label>
-                  <textarea type="text" class="form-control vresize" id="article_description" placeholder="Describe your article" maxlength="255"></textarea>
+                  <label for="description">Body</label>
+                  <textarea type="text" class="form-control vresize" id="article_description" placeholder="Enter your Post Here" maxlength="255"></textarea>
                 </div>
               </form>
             </div>
